@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<header th:replace="fragments/header :: header"></header>
+
+<body>
+	
+	<main>
+		<h1>ideas</h1>
+
+		<nav id="options">
+			<span><a href="/add">add new</a></span>
+			<!--a href="/deleteall">delete all</a -->
+		</nav>
+
+<!-- 	<c:url var="firstUrl" value="/list/1" /> -->
+<!-- 	<c:url var="lastUrl" value="/list/${ideas.totalPages}" /> -->
+<!-- 	<c:url var="prevUrl" value="/list/${currentIndex - 1}" /> -->
+<!-- 	<c:url var="nextUrl" value="/list/${currentIndex + 1}" /> -->
+
+<!-- 	<div id="pagination"> -->
+<!-- 	<ul class="pagination"> -->
+<!-- 		<c:choose> -->
+<!-- 			<c:when test="${currentIndex == 1}"> -->
+<!-- 				<li class="disabled"><a href="#">&lt;&lt;</a></li> -->
+<!-- 				<li class="disabled"><a href="#">&lt;</a></li> -->
+<!-- 			</c:when> -->
+<!-- 			<c:otherwise> -->
+<!-- 				<li><a href="${firstUrl}">&lt;&lt;</a></li> -->
+<!-- 				<li><a href="${prevUrl}">&lt;</a></li> -->
+<!-- 			</c:otherwise> -->
+<!-- 		</c:choose> -->
+<!-- 		<c:forEach var="i" begin="${beginIndex}" end="${endIndex}"> -->
+<!-- 			<c:url var="pageUrl" value="/list/${i}" /> -->
+<!-- 			<c:choose> -->
+<!-- 				<c:when test="${i == currentIndex}"> -->
+<!-- 					<li class="active"><a href="${pageUrl}"><c:out -->
+<!-- 								value="${i}" /></a></li> -->
+<!-- 				</c:when> -->
+<!-- 				<c:otherwise> -->
+<!-- 					<li><a href="${pageUrl}"><c:out value="${i}" /></a></li> -->
+<!-- 				</c:otherwise> -->
+<!-- 			</c:choose> -->
+<!-- 		</c:forEach> -->
+<!-- 		<c:choose> -->
+<!-- 			<c:when test="${currentIndex == ideas.totalPages}"> -->
+<!-- 				<li class="disabled"><a href="#">&gt;</a></li> -->
+<!-- 				<li class="disabled"><a href="#">&gt;&gt;</a></li> -->
+<!-- 			</c:when> -->
+<!-- 			<c:otherwise> -->
+<!-- 				<li><a href="${nextUrl}">&gt;</a></li> -->
+<!-- 				<li><a href="${lastUrl}">&gt;&gt;</a></li> -->
+<!-- 			</c:otherwise> -->
+<!-- 		</c:choose> -->
+<!-- 	</ul> -->
+<!-- 	</div> -->
+
+	<div id="ideas">
+		<th:block th:each="idea : ${ideas.content}">
+			
+				<div class="idea" th:class="${ideas.type}">
+					<div class="pin"></div>
+					<p th:text="${'#' + idea.id}"></p>
+					<h2><a th:href="${'/' + idea.id}"></a></h2>
+					<p th:href="${idea.shortDescription}"></p>
+					<p class="timestamp" th:href="${idea.lastUpdated}"></p>
+				</div>
+		</th:block>
+	</div>
+	</main>
+	
+<!-- 	<footer th:replace="fragments/footer :: footer"></footer> -->
+</body>
+</html>

@@ -1,0 +1,162 @@
+body {
+    padding: 0;
+    margin: 0;
+    background-color: white;
+    width: 80%;
+	margin: 0 auto;
+	padding: 20px;
+	max-width: 1000px;	
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+h1 {
+	text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#options {
+	display: flex;
+	width: 100%;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+#options span {
+	padding: 0 10px;
+}
+
+#pagination {
+	width: 100%;
+	text-align: center;
+}
+
+.pagination > .active > a, 
+.pagination > .active > a:focus, 
+.pagination > .active > a:hover, 
+.pagination > .active > span, 
+.pagination > .active > span:focus, 
+.pagination > .active > span:hover {
+	background-color: #f0dd27;
+}
+
+.pagination > li > a {
+	border: none !important;
+}
+
+form input, form textarea {
+	width: 100%;
+}
+
+textarea {
+	resize:vertical;
+}
+
+hr {
+	width: 100%;
+	margin: 15px 0;
+}
+
+input[type="submit"] {
+	width: initial;
+}
+
+#ideas {
+	width: 100%;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+.idea {
+    width: 300px;
+    padding: 20px;
+    padding-top: 5px;
+    margin: 20px 10px;
+    min-height: 200px;
+}
+
+/*
+.idea:nth-child(even) {
+	background-color: #9bb909;
+}
+
+.idea:nth-child(odd) {
+	background-color: #f0dd27;
+}
+*/
+
+/*  to be able to choose the color of the idea */
+
+.colors {
+	display: flex;
+	width: 100%;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.colors .radio {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    /*border-radius: 50%;*/
+    margin: 10px;    
+}
+
+.colors input[type=radio]{
+    display: none;
+}
+
+.colors input[type=radio]:checked + .radio{
+    border: 3px solid grey; 
+}
+
+
+
+.idea h2 {
+    margin-top: 0;
+    font-size: 1.8em;
+}
+
+.idea span {
+	color: #828282;
+}
+
+.idea .pin {
+	border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    background-color: #545454;
+    position: relative;
+    top: -20px;
+    left: 110px;
+}
+
+#shortDesc {
+	min-height: 50px;
+}
+
+#longDesc {
+	min-height: 200px;
+}
+
+.timestamp {
+    font-size: 0.9em;
+}
+
+a, a:hover, a:link, a:active, a:visited {
+	color: #404040;
+	text-decoration: none;
+}
+
+.important {
+	background-color: #ff4c3f;
+}
+
+.low {
+	background-color: #c3c3c3;
+}
